@@ -12,7 +12,9 @@ if __name__ == '__main__':
     second.next = third
     
     llist.printList()
-
-
+    
+    llist.push(4)
+    llist.push(5)
+    llist.printList()
 
  
