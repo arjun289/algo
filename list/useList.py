@@ -16,5 +16,9 @@ if __name__ == '__main__':
     llist.push(4)
     llist.push(5)
     llist.printList()
-
- 
+    llist.append(10)
+    llist.append(20)
+    llist.printList()
+    llist.delete(20)
+    llist.printList()
+    print(llist.getC())
