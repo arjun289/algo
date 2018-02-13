@@ -63,4 +63,47 @@ class LinkedList:
         return self.__getCount(self.head)
 
 
+    def getCentre(self):
+        fast = self.head
+        slow = self.head
+
+        while(fast is not None and fast.next is not None):
+            fast = fast.next.next
+            slow = slow.next
+
+        return slow.data
+        
+    def reverse(self):
+        prev = None
+        current = self.head
+        nex = None
+
+        while(current is not None):
+            nex = current.next
+            current.next = prev
+            prev = current
+            current = nex
+        self.head = prev
+
+    def rev(self):
+        if self.head is  None:
+            return
+        self.__reverseUtil(self.head, None)
+
+    def __reverseUtil(self, curr, prev):
+        if curr.next is None:
+            self.head = curr
+            curr.next = prev
+            return
+
+        nex = curr.next
+        curr.next = prev
+        self.__reverseUtil(nex, curr)
+
+
+
+
+
+
+
 
