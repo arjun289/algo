@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from vehicle import Vehicle
-import uuid
+from uuid import uuid1
 
 
 class ParkingSpot(ABC):
@@ -10,7 +10,7 @@ class ParkingSpot(ABC):
         self.vehicle = vehicle
 
     def generate_id(self):
-        return uuid.uuid1()
+        return uuid1()
 
     def is_free(self) -> bool:
         pass
