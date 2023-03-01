@@ -12,14 +12,13 @@ class StatsList(list):
             idx = int(len(self) / 2)
             return (self[idx] + self[idx-1]) / 2
 
-
-def mode(self):
-    freqs = defaultdict(int)
-    for item in self:
-        freqs[item] += 1
-        mode_freq = max(freqs.values())
-        modes = []
-        for item, value in freqs.items():
-            if value == mode_freq:
-                modes.append(item)
+    def mode(self):
+        freqs = defaultdict(int)
+        for item in self:
+            freqs[item] += 1
+            mode_freq = max(freqs.values())
+            modes = []
+            for item, value in freqs.items():
+                if value == mode_freq:
+                    modes.append(item)
         return modes
