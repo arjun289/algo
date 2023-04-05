@@ -5,7 +5,9 @@ def reverse_words(sentence):
     high = len(sentence_string) - 1
     
     while low < high:
-        sentence_string[low], sentence_string[high] = sentence_string[high], sentence_string[low]
+        sentence_string[low], sentence_string[high] = sentence_string[high], \
+            sentence_string[low]
+        
         low += 1
         high -= 1
     

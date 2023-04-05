@@ -1,6 +1,7 @@
 import pytest
 from typing import List
 
+
 class Fruit():
     def __init__(self, name: str) -> None:
         self.name = name
@@ -24,15 +25,17 @@ class FruitSalad():
 def fruit_bowl():
     return [Fruit("Apple"), Fruit("Banana")]
 
+
 def test_fruit_salad(fruit_bowl):
     fruit_salad = FruitSalad(*fruit_bowl)
     assert all(fruit.cubed for fruit in fruit_salad.fruit)
 
 
-#### Request other fixtures ####
+# Request other fixtures #
 @pytest.fixture
 def first_entry():
     return "a"
+
 
 @pytest.fixture
 def second_entry():

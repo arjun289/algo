@@ -6,3 +6,4 @@ devops/airflow/dags
 devops/airflow/logs
 devops/airflow/plugins
 logs/
+airflow.db
